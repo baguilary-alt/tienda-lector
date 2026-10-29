@@ -16,7 +16,7 @@
 <div class="manual"><label for="manualCode">Si la cámara no lee el código, escríbelo aquí:</label><input id="manualCode" inputmode="numeric" placeholder="Código de barras"><button class="secondary" id="send">Enviar código a la tienda</button></div>
 <button class="secondary" id="back">Volver a la tienda</button>
 </main>
-<script src="https://unpkg.com/@zxing/browser@0.1.5/umd/index.min.js"></script>
+<script src="https://unpkg.com/@zxing/browser@0.1.5/umd/zxing-browser.min.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/umd/zxing-browser.min.js'"></script>
 <script>
 const params=new URLSearchParams(location.search);const target=params.get('target')||'producto';
 const statusEl=document.getElementById('status'),video=document.getElementById('video');let reader=null,controls=null,busy=false;
